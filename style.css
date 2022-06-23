@@ -75,10 +75,13 @@ i {
 }
 
 #outputDisplay p {
-    overflow: hidden;
     padding: 1rem;
     font-size: 2rem;
     border: 1px solid #ffffff8a;
+}
+
+#output {
+    overflow-y: hidden;
 }
 
 #unit {

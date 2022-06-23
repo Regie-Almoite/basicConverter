@@ -1,27 +1,40 @@
 function toMillisecond() {
     let toConvert = document.getElementById("minute").value;
+    let milliBtn = document.getElementById("milli");
+    let secBtn = document.getElementById("sec");
+    let hourBtn = document.getElementById("hour");
+
     document.getElementById("output").innerHTML = Number(toConvert) * 60000;
     document.getElementById("unit").innerHTML = "Millisecond";
-    document.getElementById("milli").style.animation =
-        "buttonAnim 0.25s ease forwards";
-    document.getElementById("sec").style.animation = "none";
-    document.getElementById("hour").style.animation = "none";
+
+    // Change button style
+    milliBtn.classList.toggle("active");
+    secBtn.classList.remove("active");
+    hourBtn.classList.remove("active");
 }
 function toSecond() {
     let toConvert = document.getElementById("minute").value;
+    let milliBtn = document.getElementById("milli");
+    let secBtn = document.getElementById("sec");
+    let hourBtn = document.getElementById("hour");
+
     document.getElementById("output").innerHTML = Number(toConvert) * 60;
     document.getElementById("unit").innerHTML = "Second";
-    document.getElementById("sec").style.animation =
-        "buttonAnim 0.25s ease forwards";
-    document.getElementById("milli").style.animation = "none";
-    document.getElementById("hour").style.animation = "none";
+
+    secBtn.classList.toggle("active");
+    milliBtn.classList.remove("active");
+    hourBtn.classList.remove("active");
 }
 function toHour() {
     let toConvert = document.getElementById("minute").value;
+    let milliBtn = document.getElementById("milli");
+    let secBtn = document.getElementById("sec");
+    let hourBtn = document.getElementById("hour");
+
     document.getElementById("output").innerHTML = Number(toConvert) / 60;
     document.getElementById("unit").innerHTML = "Hour";
-    document.getElementById("hour").style.animation =
-        "buttonAnim 0.25s ease forwards";
-    document.getElementById("milli").style.animation = "none";
-    document.getElementById("sec").style.animation = "none";
+
+    hourBtn.classList.toggle("active");
+    secBtn.classList.remove("active");
+    milliBtn.classList.remove("active");
 }

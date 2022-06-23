@@ -1,58 +1,21 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid blue; */
-    color: white;
+:root {
+    --grey: #9797978a;
+    --black: #303134;
 }
 
-html {
-    font-size: 10px;
+#converter {
+    border: none;
 }
 
-body {
-    background-color: black;
-}
-
-.container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 500px;
-    margin: 0 auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid grey;
-    padding: 3rem;
-    border-radius: 1rem;
-}
-
-.container div {
-    width: 50%;
-}
-
-#minuteDisplay {
-    margin-right: 1rem;
-}
-
-#minuteDisplay div {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#toConvert {
-    border: 1px solid #ffffff8a;
+#toConvert,
+#outputDisplay {
+    border: 0.25rem solid var(--grey);
 }
 
 #toConvert input {
-    background-color: black;
+    height: 2rem;
+    border: none;
     width: 100%;
-    padding: 1rem;
-    font-size: 2rem;
-    text-align: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -62,73 +25,55 @@ input::-webkit-inner-spin-button {
 }
 
 #toConvert p {
-    background-color: #303134;
-    color: #bdc1c6;
-    padding: 1rem;
-    font-size: 2rem;
-}
-
-i {
-    font-size: 2rem;
-    padding: 1rem;
-    margin: 1rem auto;
+    height: 2rem;
+    background-color: var(--black);
 }
 
 #outputDisplay p {
-    padding: 1rem;
-    font-size: 2rem;
-    border: 1px solid #ffffff8a;
-}
-
-#output {
-    overflow-y: hidden;
-}
-
-#unit {
-    background-color: #303134;
-}
-
-#buttons {
+    height: 2rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+#outputDisplay #unit {
+    background-color: var(--black);
 }
 
 #buttons button {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    border-radius: 1rem;
-    color: black;
-    margin: 0.5rem 0;
+    background-image: linear-gradient(
+        to right top,
+        #00828e,
+        #008c96,
+        #00969d,
+        #00a0a4,
+        #00aaaa
+    );
+    width: 5rem;
+    margin: 0.5rem;
+    font-size: 9px;
+    border: none;
 }
 
-@keyframes buttonAnim {
-    from {
-        transform: scale(0.8);
-    }
-    to {
-        transform: scale(1);
-    }
+#buttons .active {
+    background-image: linear-gradient(
+        to right top,
+        #9b9b00,
+        #a3a500,
+        #acaf00,
+        #b4ba00,
+        #bcc400
+    );
 }
 
 @media only screen and (min-width: 768px) {
+    #converter {
+        border-radius: 1rem;
+        border: 0.5rem solid rgb(124, 124, 124);
+    }
     #buttons button {
-        font-size: 1.5rem;
-        width: 70%;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .container {
-        width: 50%;
-    }
-
-    #minuteDisplay div {
-        width: 50%;
-    }
-
-    #buttons button {
-        width: 50%;
+        font-size: 8px;
+        width: 5rem;
+        margin: 0.5rem;
     }
 }

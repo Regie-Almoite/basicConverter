@@ -1,6 +1,15 @@
 :root {
     --grey: #9797978a;
-    --black: #303134;
+    --green: linear-gradient(
+        to right top,
+        #9b9b00,
+        #a3a500,
+        #acaf00,
+        #b4ba00,
+        #bcc400
+    );
+    --blue: #00828e;
+    --unitText-color: #000000;
 }
 
 #converter {
@@ -10,12 +19,19 @@
 #toConvert,
 #outputDisplay {
     border: 0.25rem solid var(--grey);
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 #toConvert input {
-    height: 2rem;
+    height: 2em;
     border: none;
     width: 100%;
+    font-size: 1rem;
+}
+
+#toConvert input:focus {
+    outline: none;
 }
 
 input::-webkit-outer-spin-button,
@@ -25,19 +41,24 @@ input::-webkit-inner-spin-button {
 }
 
 #toConvert p {
-    height: 2rem;
-    background-color: var(--black);
+    height: 2em;
+    background-image: var(--green);
+    font-size: 1rem;
+    color: var(--unitText-color);
+    font-weight: bold;
 }
 
 #outputDisplay p {
-    height: 2rem;
+    height: 2em;
     display: flex;
+    font-size: 1rem;
     align-items: center;
     justify-content: center;
 }
 
 #outputDisplay #unit {
-    background-color: var(--black);
+    background-image: var(--green);
+    font-weight: bold;
 }
 
 #buttons button {
@@ -51,29 +72,35 @@ input::-webkit-inner-spin-button {
     );
     width: 5rem;
     margin: 0.5rem;
-    font-size: 9px;
+    font-size: 0.6rem;
     border: none;
 }
 
 #buttons .active {
-    background-image: linear-gradient(
-        to right top,
-        #9b9b00,
-        #a3a500,
-        #acaf00,
-        #b4ba00,
-        #bcc400
-    );
+    background-image: var(--green);
 }
 
 @media only screen and (min-width: 768px) {
     #converter {
         border-radius: 1rem;
-        border: 0.5rem solid rgb(124, 124, 124);
+        border: 0.5rem solid var(--blue);
+    }
+
+    #toConvert input,
+    #toConvert p,
+    #outputDisplay #output,
+    #outputDisplay #unit {
+        font-size: 1.5rem;
     }
     #buttons button {
-        font-size: 8px;
-        width: 5rem;
-        margin: 0.5rem;
+        width: 6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #buttons button {
+        width: 8rem;
+        font-size: 1rem;
     }
 }

@@ -48,6 +48,12 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
 }
 
+#to {
+    font-size: 2rem;
+    color: var(--grey);
+}
+
+/* output display */
 #outputDisplay p {
     height: 2em;
     display: flex;
@@ -61,6 +67,7 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
 }
 
+/* buttons */
 #buttons button {
     background-image: linear-gradient(
         to right top,

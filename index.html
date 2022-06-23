@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Time Conversion</title>
+        <link rel="stylesheet" href="./style.css" />
+        <!-- fontawesome -->
+        <script
+            src="https://kit.fontawesome.com/a15ff02c89.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <!-- app container start -->
+        <div class="container">
+            <div id="minuteDisplay">
+                <div id="toConvert">
+                    <form action="#">
+                        <input
+                            id="minute"
+                            type="number"
+                            placeholder="To Convert"
+                        />
+                    </form>
+                    <p>Minute</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+                <div id="outputDisplay">
+                    <p id="output">0</p>
+                    <p id="unit">Millisecond</p>
+                </div>
+            </div>
+            <div id="buttons">
+                <button id="milli" onclick="toMillisecond()">
+                    Convert to Millisecond
+                </button>
+                <button id="sec" onclick="toSecond()">Convert to Second</button>
+                <button id="hour" onclick="toHour()">Convert to Hour</button>
+            </div>
+        </div>
+        <!-- app container end -->
+        <!-- external js -->
+        <script src="./app.js"></script>
+    </body>
+</html>

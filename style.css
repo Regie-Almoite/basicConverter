@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid blue; */
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid grey;
+    padding: 3rem;
+}
+
+.container div {
+    width: 50%;
+}
+
+#minuteDisplay div {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#toConvert {
+    border: 1px solid #ffffff8a;
+}
+
+#toConvert input {
+    background-color: black;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#toConvert p {
+    background-color: #303134;
+    color: #bdc1c6;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+i {
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+#outputDisplay p {
+    padding: 1rem;
+    font-size: 2rem;
+    border: 1px solid #ffffff8a;
+}
+
+#unit {
+    background-color: #303134;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#buttons button {
+    width: 50%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    color: black;
+}
+
+@keyframes buttonAnim {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}

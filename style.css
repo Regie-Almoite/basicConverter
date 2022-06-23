@@ -6,6 +6,10 @@
     color: white;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     background-color: black;
 }
@@ -13,21 +17,28 @@ body {
 .container {
     position: absolute;
     display: flex;
-    width: 50%;
+    align-items: center;
+    width: 100%;
+    height: 500px;
     margin: 0 auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid grey;
     padding: 3rem;
+    border-radius: 1rem;
 }
 
 .container div {
     width: 50%;
 }
 
+#minuteDisplay {
+    margin-right: 1rem;
+}
+
 #minuteDisplay div {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
@@ -64,6 +75,7 @@ i {
 }
 
 #outputDisplay p {
+    overflow: hidden;
     padding: 1rem;
     font-size: 2rem;
     border: 1px solid #ffffff8a;
@@ -80,11 +92,12 @@ i {
 }
 
 #buttons button {
-    width: 50%;
+    width: 100%;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius: 1rem;
     color: black;
+    margin: 0.5rem 0;
 }
 
 @keyframes buttonAnim {
@@ -93,5 +106,26 @@ i {
     }
     to {
         transform: scale(1);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #buttons button {
+        font-size: 1.5rem;
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        width: 50%;
+    }
+
+    #minuteDisplay div {
+        width: 50%;
+    }
+
+    #buttons button {
+        width: 50%;
     }
 }
